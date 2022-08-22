@@ -22,8 +22,8 @@ a.homebutton {
 }
 
 a.homebutton:hover {
-	background-image: none;
-	background-color: blue;
+	background-image: url('homebutton_hover.svg');
+	background-size: 100% 100%;
 }
 
 div.linkbar_left {
@@ -70,6 +70,6 @@ a.linkbar_buttonbar_item {
 }
 
 a.linkbar_buttonbar_item:hover {
-	background-image: none;
-	background-color: blue;
+	background-image: url('gradient-bar_hover.svg');
+	background-size: 100% 100%;
 }
