@@ -1,3 +1,10 @@
+body {
+	color: white;
+	background-color: black;
+	background-image: url('test.png');
+	background-size: 100%;
+}
+
 div.homebutton {
 	position: fixed;
 	top: 0px;
@@ -6,7 +13,8 @@ div.homebutton {
 	height: 80px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	background-color: gray;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(8px);
 }
 
 a.homebutton {
@@ -19,11 +27,25 @@ a.homebutton {
 	color: white;
 	background-image: url('homebutton.svg');
 	background-size: 100% 100%;
+	animation-name: mouseout_homebutton;
+	animation-duration: 0.15s;
 }
 
 a.homebutton:hover {
 	background-image: url('homebutton_hover.svg');
 	background-size: 100% 100%;
+	animation-name: mouseover_homebutton;
+	animation-duration: 0.15s;
+}
+
+@keyframes mouseover_homebutton {
+	0% {background-image: url('homebutton.svg');}
+	100% {background-image: url('homebutton_hover.svg');}
+}
+
+@keyframes mouseout_homebutton {
+	0% {background-image: url('homebutton_hover.svg');}
+	100% {background-image: url('homebutton.svg');}
 }
 
 div.linkbar_left {
@@ -32,7 +54,8 @@ div.linkbar_left {
 	left: 0px;
 	width: calc(50% - 40px);
 	height: 60px;
-	background-color: gray;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(8px);
 }
 
 div.linkbar_right {
@@ -41,7 +64,8 @@ div.linkbar_right {
 	left: calc(50% + 40px);
 	width: calc(50% - 40px);
 	height: 60px;
-	background-color: gray;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(8px);
 }
 
 ul.linkbar_buttonbar {
@@ -67,9 +91,23 @@ a.linkbar_buttonbar_item {
 	color: white;
 	background-image: url('gradient-bar.svg');
 	background-size: 100% 100%;
+	animation-name: mouseout_linkbar_item;
+	animation-duration: 0.15s;
 }
 
 a.linkbar_buttonbar_item:hover {
 	background-image: url('gradient-bar_hover.svg');
 	background-size: 100% 100%;
+	animation-name: mouseover_linkbar_item;
+	animation-duration: 0.15s;
+}
+
+@keyframes mouseover_linkbar_item {
+	0% {background-image: url('gradient-bar.svg');}
+	100% {background-image: url('gradient-bar_hover.svg');}
+}
+
+@keyframes mouseout_linkbar_item {
+	0% {background-image: url('gradient-bar_hover.svg');}
+	100% {background-image: url('gradient-bar.svg');}
 }
